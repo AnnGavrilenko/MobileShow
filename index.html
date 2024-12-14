@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index-style.css" />
+    <link rel="stylesheet" href="form-style.css" />
+    <link rel="stylesheet" href="result-style.css" />
+    <script src="opacity-while-scroll.js"></script>
+    <script src="form.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+        <div class="video-background">
+            <video autoplay muted loop id="background-video">
+                <source src="img/body.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+      
+    <div id="screensaver" class="screensaver">
+      
+      <div class="text-container"> 
+       
+        <p>Хотите узнать, какие мобильные устройства будут задавать тренды в 2024 году? Посетите нашу 
+          <strong>Выставку мобильных устройств</strong> с 15 по 17 декабря 2024 года!
+      </div>
+      <video autoplay muted loop id="left-video"> 
+        <source src="img/phone.mp4" type="video/mp4"> Your browser does not support the video tag. </video> 
+      
+    </div>
+    <div id="form" class="form">
+      <form id="company-form">
+        <label for="company-name">Название компании:</label>
+        <input type="text" id="company-name" name="company-name" required />
+
+        <label for="country">Страна:</label>
+        <select id="country" name="country" required>
+          <!-- Список стран будет динамически добавлен через JavaScript -->
+        </select>
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="quantity">Количество:</label>
+        <input type="number" id="quantity" name="quantity" required />
+
+        <button type="button" id="add-property" class="form-button">Добавить свойство</button>
+
+        <div id="additional-properties"></div>
+
+        <button type="submit"  class="form-button">Сохранить</button>
+      
+      </form>
+
+      <img src="img/from-fone.png" alt="Ваше изображение" id="image-one" /> 
+    </div>
+    <div id="result-table" class="result-table">
+        <div class="controls">  
+      <select id="company-select">
+        <option value="">Выберите компанию</option>
+        <!-- Опции будут добавлены динамически через JavaScript -->
+      </select>
+      <button id="add-new">Добавить новую запись</button>
+      <button id="clear-form">Очистить форму компании</button>
+      <button id="delete-all">Удалить все записи</button>
+      <button id="show-all">Вывести все записи</button>
+      <button id="show-company">Вывести данные компании</button>
+      <button id="sort-quantity">Показать компании по количеству продукции</button>
+
+    </div>
+      <table id="data-table" style="display: none">
+        <thead>
+          <tr>
+            <th>Название компании</th>
+            <th>Страна</th>
+            <th>Email</th>
+            <th>Количество</th>
+            <th>Номер телефона</th>
+            <th>Комментарий</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Данные будут добавлены динамически через JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

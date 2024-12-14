@@ -1,0 +1,55 @@
+div.result-table {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(img/table-form.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.controls {
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px; /* Отступ под элементами управления */
+    gap: 1%;
+}
+
+.controls select,
+.controls button {
+   margin-top: 0;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.controls button {
+    border: 1px solid white; /* Белая обводка для кнопок */
+    border-radius: 4px; /* Скругление углов */
+    background-color: black; /* Прозрачный фон */
+    color: white; /* Цвет текста внутри кнопки */
+    transition: background-color 0.3s; /* Плавный переход для фона кнопки */
+}
+.controls select {
+    background: linear-gradient(90deg, violet, lightblue ); /* Градиент фон */
+    color: rgb(0, 0, 0); /* Цвет текста */
+}
+
+table {
+    width: 80%;
+    text-align: center; /* Центрировать текст в таблице */
+    border-collapse: collapse;
+    margin-top: 20px; /* Отступ сверху таблицы */
+    transition: opacity 0.5s ease-in-out; /* Плавное появление и исчезновение */
+    background-color: white;
+}
+
+table.hidden {
+    opacity: 0;
+    pointer-events: none; /* Отключаем события указателя для скрытой таблицы */
+}
+
+table td, table th {
+    border: 1px solid black;
+    padding: 8px;
+}

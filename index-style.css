@@ -1,0 +1,93 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory; /* Включаем snapping при прокрутке */
+    
+}
+
+.video-background { 
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    z-index: -1; } 
+
+#background-video { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; }
+
+.screensaver, .form {
+    width: 80%;
+    height: 80vh; /* Высота каждого дива 80% от высоты окна */
+    margin: 10vh auto; /* Отступы сверху и снизу для создания пространства между дивами */
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание по центру */
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    scroll-snap-align: center; /* Каждый див будет фокусироваться в центре экрана при прокрутке */
+    scroll-margin: 10vh; /* Отступ от верхней и нижней части экрана для snapping */
+    opacity: 1; /* Прозрачность элемента */
+    transition: opacity 0.5s ease-in-out; /* Плавный переход прозрачности */
+}
+
+.screensaver { 
+    display: flex; 
+    align-items: center; /* Вертикальное выравнивание */ 
+    justify-content: space-between; /* Расположение элементов по бокам */ 
+    background: rgba(0, 0, 0); /* Полупрозрачный фон */ 
+    border: 0.5px solid rgb(255, 255, 255);
+    position: relative;
+}
+    
+#left-video { 
+    height: 100%; 
+    position: absolute; /* Позиционирование видео */
+    top: 0; /* Прикрепляем к верхней части */
+    right: 0; /* Прикрепляем к левой стороне */}
+
+.text-container {
+    position: absolute; /* Позволяет наложить на видео */
+    top: 35%; /* Выравнивание по вертикали */
+    left: 0; /* Начинаем с левой стороны */
+    padding-left: 10%;
+    
+    z-index: 2;
+    width: 40%;
+}
+
+p 
+{ margin: 0; 
+font-size: 1.8em;
+color: white;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: lighter;
+}
+
+
+.result-table {
+    width: 80%;
+    height: 80vh; /* Высота каждого дива 80% от высоты окна */
+    margin: 10vh auto; /* Отступы сверху и снизу для создания пространства между дивами */
+    border: 2px solid black; /* Граница для каждого дива */
+    display: flex;
+    flex-direction: column; /* Устанавливаем направление flex-элементов по колонке */
+    align-items: center; /* Горизонтальное выравнивание по центру */
+    justify-content: flex-start; /* Вертикальное выравнивание по началу (вверху) */
+    scroll-snap-align: center; /* Каждый див будет фокусироваться в центре экрана при прокрутке */
+    scroll-margin: 10vh; /* Отступ от верхней и нижней части экрана для snapping */
+    background: transparent; /* Полупрозрачный фон */ 
+    
+    opacity: 1; /* Прозрачность элемента */
+    transition: opacity 0.5s ease-in-out; /* Плавный переход прозрачности */
+    border-radius: 10px;
+}
+
+.hidden { /*класс для js*/
+    opacity: 0; /* Скрытие элемента */
+}
+
+
+

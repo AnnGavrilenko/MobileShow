@@ -1,0 +1,73 @@
+
+
+div.form {
+    position: relative;
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    width: 45%; /* Используем всю ширину текстового контейнера */
+    position: absolute;
+    left: 5%;
+    border: 1px solid #ccc; /* Рамка полей */
+    padding: 5%;
+}
+
+label {
+    margin-bottom: 8px; /* Отступы под каждым лейблом */
+    color: white; /* Цвет текста */
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+input, select, button.form-button {
+    text-align: center;
+    width: 100%; /* Все элементы займет 100% ширины */
+    padding: 10px; /* Отступ внутри полей */
+    margin-bottom: 15px; /* Отступ между полями */
+    border: 1px solid #ccc; /* Рамка полей */
+    border-radius: 4px; /* Скругление углов */
+    font-size: 16px; /* Размер шрифта */
+}
+
+
+input[name="company-name"] {
+    width: 100%; /* Все элементы займет 100% ширины */
+    padding: 10px; /* Отступ внутри полей */
+    margin-bottom: 15px; /* Отступ между полями */
+    border: none; /* Убираем рамку полей */
+    border-radius: 4px; /* Скругление углов */
+    font-size: 20px; /* Размер шрифта */
+    background: linear-gradient(90deg, violet, lightblue ); /* Градиент фон */
+    color: rgb(0, 0, 0); /* Цвет текста */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Непрозрачная обводка светом */
+}
+
+button.form-button {
+    width: 100%; /* Прозрачная кнопка на всю ширину */
+    padding: 10px; /* Отступ внутри кнопки */
+    margin-bottom: 15px; /* Отступ между кнопками */
+    border: 1px solid white; /* Белая обводка для кнопок */
+    border-radius: 4px; /* Скругление углов */
+    background-color: transparent; /* Прозрачный фон */
+    color: white; /* Цвет текста внутри кнопки */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s; /* Плавный переход для фона кнопки */
+}
+
+
+button.form-button:hover {
+    background-color: #0056b3; /* Становится темнее при наведении */
+}
+
+#image-one {
+    position: absolute; 
+    top: 15%; 
+    right: 0; /* Видео на правой стороне */
+    
+    object-fit: cover; 
+    z-index: 1; 
+}
